@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+
+  "name": "Webreg Helper",
+  "description": "Help you look up professor in webreg and courseplanner",
+  "version": "1.0",
+
+  "browser_action": {
+    //"default_icon": "icon.png",
+    //"default_popup": "hello"
+    "default_title": "hello"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://sims.rutgers.edu/*"],
+      "css": ["mycss.css"],
+      "js": ["myscript.js"]
+    }
+  ],
+  "background": 
+      {
+        //"page": "background.html",
+        "scripts": ["bg.js"]
+      },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "icons":{
+    "16": "rutgers.png",
+    "48": "rutgers.png",
+    "128": "rutgers.png"
+  }
+}
